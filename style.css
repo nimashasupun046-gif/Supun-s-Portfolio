@@ -1,0 +1,372 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    background: #111111;
+    color: white;
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Container to align photo and text side-by-side */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Space between the photo and the text */
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left; /* Align text to the left */
+}
+
+/* Keep the photo from shrinking */
+.header-left {
+    flex-shrink: 0;
+}
+
+/* Enlarged Profile Image Styles */
+.profile-img {
+    width: 200px; /* Adjust this value if you want it even bigger */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Right-side text styling */
+.header-right {
+    color: white;
+}
+
+.header-right h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.header-right .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.header-right .bio {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    max-width: 600px; /* Prevents paragraph from stretching too wide */
+    line-height: 1.6;
+}
+
+/* Download CV Button */
+.btn-download {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #ff9f43; /* Your orange theme color */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #e68a2e;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.intro {
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    font-size: 1rem;
+}
+
+/* Section Styles */
+.section {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.section h2 {
+    color: #1e3c72;
+    border-bottom: 2px solid #1e3c72;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* Cards (Education, Projects, Achievements) */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.institution {
+    font-weight: bold;
+    color: #7f8c8d;
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+/* Footer & Social Links */
+.footer {
+    background-color:#111111;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-top: 40px;
+}
+
+.footer h2 {
+    margin-bottom: 15px;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.github {
+    background-color: #0077b5;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.social-btn:hover {
+    opacity: 0.8;
+    transform: translateY(-3px);
+}
+
+.tech-stack {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+    font-weight: 500;
+}
+.header-right {
+    color: white;
+}
+.header-right h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+.header-right .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.header-right .bio {
+    font-size: 1rem;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+.btn-download {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #ff9f43;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/*--- Simple Text Fade-in Animation ---*/
+@keyframes fadeIn{
+    from { opacity:0; transform: translateY(10px);}
+    to { opacity:1; transform: translateY(0);}
+}
+
+.header-right h1{
+    animation:fadeIn 5s ease-out forwards;
+}
+.header-right .subtitle{
+    opacity: 0;
+    animation: fadeIn 5s ease-out 1.5s forwards;
+}
+.header-right .bio{
+    opacity: 0;
+    animation:fadeIn 5s ease-out 1.5s forwards;
+}
+
+.btn-download {
+    animation: fadeIn 10s ease-out forwards;
+}
+
+body { padding-top: 50px;}
+.nav-bar {
+    position: fixed;
+    top: 0; left: o; width: 100%;
+    background: #111;
+    padding: 10px;
+    text-align: center;
+}
+.nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    margin: 5px;
+}
+.project-img {
+    width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+#education .card {
+    border: 2px solid #00d2ff;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+#education .card, #projects .card, #achievements .card {
+    border: 2px solid #00d2ff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 2px solid #00d2ff !important;
+    border-radius: 12px !important;
+    padding: 15px !important;
+    margin-bottom: 20px !important;
+    background: transparent;
+
+}
+footer p {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.email-box {
+    border: 2px solid #00d2ff;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+}
+
+.dim-text {
+    animation: fadeEffect 1s infinite alternate;
+}
+
+@keyframes fadeEffect {
+    from{
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.subtitle {
+    font-family: 'Poppins' , sans-serif;
+    font-weight: 600;
+}
+
+.bio {
+    font-family: 'Poppins' , sans-serif;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #00d2ff;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.duration {
+    color: #333333;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.achievement-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.achievement-grid .card {
+    width: 320px;
+   
+}
+
+.card h3 {
+    color: #111111;
+    font-size: 18px;
+}
+
+.profile-img {
+    width: 210px;
+    height: 210;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+nav a, nav button {
+    border: 2px solid #00d2ff !important;
+}
+
+.card {
+    border: 2px solid #00d2ff !important;
+}
+
